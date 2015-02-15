@@ -1,22 +1,48 @@
 {
   "name": "react-evil-icons",
   "version": "0.1.0",
-  "private": true,
+  "description": "React components for Evil Icons",
   "main": "lib/index.js",
   "scripts": {
-    "start": "gulp",
-    "clean": "rm -Rf ./lib"
+    "clean": "rm -Rf ./lib",
+    "compile": "npm run clean && 6to5 --experimental src --out-dir lib",
+    "watch": "6to5 --experimental src --watch --out-dir lib",
+    "test": "jest ./lib",
+    "start": "npm run compile && npm test",
+    "onchange": "onchange 'lib/*.js' 'lib/**/*.js' -- npm test",
+    "dev": "npm run watch & npm run onchange",
+    "prepublish": "npm ls && npm test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saulhoward/react-evil-icons.git"
+  },
+  "keywords": [
+    "react-component",
+    "evil-icons",
+    "svg"
+  ],
+  "license": "Apache 2",
+  "bugs": {
+    "url": "https://github.com/saulhoward/react-evil-icons/issues"
+  },
+  "homepage": "https://github.com/saulhoward/react-evil-icons",
   "peerDependencies": {
-    "react": "^0.12.0",
-    "react-pure": "^0.1.0"
+    "react": "^0.12.2"
   },
-  "devDependencies": {
-    "gulp": "^3.8.10",
-    "gulp-6to5": "^3.0.0",
-    "react": "^0.12.2",
-    "rimraf": "^2.2.8",
+  "dependencies": {
     "gulp-inject-string": "0.0.2",
     "evil-icons": "^1.4.0"
+  },
+  "devDependencies": {
+    "6to5": "^2.13.5",
+    "jest-cli": "^0.2.1",
+    "onchange": "0.0.2",
+    "react": "^0.12.2"
+  },
+  "jest": {
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ]
   }
 }
