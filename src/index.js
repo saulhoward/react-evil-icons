@@ -1,5 +1,3 @@
 import Icon from './Icon';
 
-export {
-    Icon
-};
+module.exports = Icon;
