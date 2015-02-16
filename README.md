@@ -11,7 +11,7 @@ React components for the excellent http://evil-icons.io/
             <link rel="stylesheet" href="/evil-icons.css">
         </head>
         <body>
-            <!-- evil icons sprite svg goes here -- see task below -->
+            <!-- evil icons sprite svg goes here - see task below -->
 
             <div id="app"></div>
 
@@ -22,13 +22,13 @@ React components for the excellent http://evil-icons.io/
 
 ```javascript
 
-    var React = require('react');                                                                                                                      
-    var Icon = require('react-evil-icons');                                                                                                        
-                                                                                                                                                      
-    React.render(                                                                                                                                      
-        <Icon name="ei-eye" size="l" />,                                                                                                               
-        document.getElementById('app')                                                                                                                 
-    );      
+    var React = require('react');
+    var Icon = require('react-evil-icons');
+
+    React.render(
+        <Icon name="ei-eye" size="l" />,
+        document.getElementById('app')
+    );
 
 ```
 
