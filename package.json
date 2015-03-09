@@ -1,6 +1,6 @@
 {
   "name": "react-evil-icons",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "React components for Evil Icons",
   "main": "lib/index.js",
   "scripts": {
@@ -34,7 +34,7 @@
   "dependencies": {
     "gulp": "^3.8.11",
     "gulp-inject-string": "0.0.2",
-    "evil-icons": "^1.4.0"
+    "evil-icons": "^1.7.2"
   },
   "devDependencies": {
     "6to5": "^2.13.5",
