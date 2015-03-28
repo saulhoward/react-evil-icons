@@ -5,8 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rm -Rf ./lib",
-    "compile": "npm run clean && 6to5 --experimental src --out-dir lib",
-    "watch": "6to5 --experimental src --watch --out-dir lib",
+    "compile": "npm run clean && babel --experimental src --out-dir lib",
+    "watch": "babel --experimental src --watch --out-dir lib",
     "test": "jest ./lib",
     "start": "npm run compile && npm test",
     "onchange": "onchange 'lib/*.js' 'lib/**/*.js' -- npm test",
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/saulhoward/react-evil-icons",
   "peerDependencies": {
-    "react": "^0.12.2"
+    "react": ">=0.12.2"
   },
   "dependencies": {
     "gulp": "^3.8.11",
@@ -37,10 +37,10 @@
     "evil-icons": "^1.7.2"
   },
   "devDependencies": {
-    "6to5": "^2.13.5",
+    "babel": "^4.7.8",
     "jest-cli": "^0.2.1",
     "onchange": "0.0.2",
-    "react": "^0.12.2"
+    "react": ">=0.12.2"
   },
   "jest": {
     "unmockedModulePathPatterns": [
