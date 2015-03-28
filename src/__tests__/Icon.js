@@ -1,8 +1,9 @@
 jest.dontMock('../Icon');
 
+import React from 'react/addons';
+import Icon from '../Icon';
+
 describe('Icon', () => {
-    import React from 'react/addons';
-    import Icon from '../Icon';
     let {TestUtils} = React.addons;
 
     it('renders an svg by default', () => {
