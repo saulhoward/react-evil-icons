@@ -28,9 +28,6 @@
     "url": "https://github.com/saulhoward/react-evil-icons/issues"
   },
   "homepage": "https://github.com/saulhoward/react-evil-icons",
-  "peerDependencies": {
-    "react": ">=0.12.2"
-  },
   "dependencies": {
     "gulp": "^3.8.11",
     "gulp-inject-string": "0.0.2",
