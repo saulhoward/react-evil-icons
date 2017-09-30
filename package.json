@@ -29,9 +29,10 @@
   },
   "homepage": "https://github.com/saulhoward/react-evil-icons",
   "dependencies": {
+    "evil-icons": "^1.7.2",
     "gulp": "^3.8.11",
     "gulp-inject-string": "0.0.2",
-    "evil-icons": "^1.7.2"
+    "prop-types": "^15.6.0"
   },
   "devDependencies": {
     "babel": "^4.7.8",
