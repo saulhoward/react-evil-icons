@@ -1,33 +1,31 @@
 var React = require('react');
+var PropTypes = require('prop-types');
 
-module.exports = React.createClass({
-    displayName: "Icon",
+Icon.propTypes = {
+    size: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    className: PropTypes.string
+}
 
-    propTypes: {
-        size: React.PropTypes.string.isRequired,
-        name: React.PropTypes.string.isRequired,
-        className: React.PropTypes.string,
-    },
+function Icon (props) {
     
-    render: function() {
-        var size    = this.props.size ? " icon--" + this.props.size : "";
-        var className = this.props.className ? " " + this.props.className : "";
-        var klass   = "icon icon--" + this.props.name + size + className;
+    var size    = props.size ? " icon--" + props.size : "";
+    var className = props.className ? " " + props.className : "";
+    var klass   = "icon icon--" + props.name + size + className;
 
-        var name = '#'+ this.props.name + '-icon';
-        var Icon = (
-            <svg className="icon__cnt">
-                <use xlinkHref={name} />
-            </svg>
-        );
-        return  (
-            <div className={klass}>
-                {this.wrapSpinner(Icon, klass)}
-            </div>
-        );
-    },
-
-    wrapSpinner: function (jsx, klass) {
+    var name = '#'+ props.name + '-icon';
+    var Icon = (
+        <svg className="icon__cnt">
+            <use xlinkHref={name} />
+        </svg>
+    );
+    return  (
+        <div className={klass}>
+            {wrapSpinner(Icon, klass)}
+        </div>
+    );
+    
+    function wrapSpinner (jsx, klass) {
         if (klass.indexOf("spinner") > -1) {
             return (
                 <div className="icon__spinner">{jsx}</div>
@@ -35,5 +33,6 @@ module.exports = React.createClass({
         }
         return jsx;
     }
+}
 
-});
+module.exports = Icon;
