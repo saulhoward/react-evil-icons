@@ -29,16 +29,18 @@
   },
   "homepage": "https://github.com/saulhoward/react-evil-icons",
   "dependencies": {
-    "evil-icons": "^1.7.2",
-    "gulp": "^3.8.11",
-    "gulp-inject-string": "0.0.2",
-    "prop-types": "^15.6.0"
+    "create-react-class": "^15.6.3",
+    "evil-icons": "^1.9.0",
+    "gulp": "^3.9.1",
+    "gulp-inject-string": "1.1.1",
+    "prop-types": "^15.6.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "babel": "^4.7.8",
-    "jest-cli": "^0.2.1",
-    "onchange": "0.0.2",
-    "react": ">=0.12.2"
+    "babel": "^6.23.0",
+    "jest-cli": "^22.2.1",
+    "onchange": "3.3.0",
+    "react": ">=16.2.0"
   },
   "jest": {
     "unmockedModulePathPatterns": [

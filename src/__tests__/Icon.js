@@ -1,11 +1,9 @@
 jest.dontMock('../Icon');
 
-import React from 'react/addons';
+import TestUtils from 'react-dom/test-utils';
 import Icon from '../Icon';
 
 describe('Icon', () => {
-    let {TestUtils} = React.addons;
-
     it('renders an svg by default', () => {
         let doc = TestUtils.renderIntoDocument(<Icon name='ei-eye' size='s' />);
         let el = TestUtils.findRenderedDOMComponentWithTag(doc, 'svg');
