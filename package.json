@@ -1,6 +1,6 @@
 {
   "name": "react-evil-icons",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "React components for Evil Icons",
   "main": "lib/index.js",
   "scripts": {
